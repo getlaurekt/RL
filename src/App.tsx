@@ -1,25 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import {
+  MantineProvider,
+  ColorSchemeProvider,
+  ColorScheme,
+  Grid,
+} from "@mantine/core";
+import NavbarNested from "./Components/Navbar/Navbar";
+import HeroText from "./Components/Hero/HeroText";
 
 function App() {
+  const [colorScheme, setColorScheme] = useState<ColorScheme>("light");
+  const toggleColorScheme = (value?: ColorScheme) =>
+    setColorScheme(value || (colorScheme === "dark" ? "light" : "dark"));
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <>
+      <ColorSchemeProvider
+        colorScheme={colorScheme}
+        toggleColorScheme={toggleColorScheme}
+      >
+        <MantineProvider
+          theme={{ colorScheme }}
+          withGlobalStyles
+          withNormalizeCSS
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Grid grow style={{ margin: 0 }}>
+            <NavbarNested />
+            <Grid.Col span={8}>
+              <HeroText />
+            </Grid.Col>
+          </Grid>
+        </MantineProvider>
+      </ColorSchemeProvider>
+    </>
   );
 }
 

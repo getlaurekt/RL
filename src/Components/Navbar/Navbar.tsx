@@ -7,20 +7,12 @@ import {
   createStyles,
   Text,
   Title,
-  ThemeIcon,
 } from "@mantine/core";
-import {
-  Icon as TablerIcon,
-  Users,
-  User,
-  Home,
-  Car,
-  Book,
-} from "tabler-icons-react";
-import { UserButton } from "../UserButton/UserButton";
+import { Users, User, Home, Car, Book } from "tabler-icons-react";
+/* import { UserButton } from "../UserButton/UserButton"; */
 import { LinksGroup } from "../NavbarLinksGroup/NavbarLinksGroup";
 import ColorScheme from "../ColorScheme/ColorScheme";
-import { Logo } from "./Logo";
+/* import { Logo } from "./Logo"; */
 
 const mockdata = [
   { label: "Home", icon: Home },
@@ -32,7 +24,6 @@ const mockdata = [
       { label: "Competitive", link: "/" },
       { label: "Freestyle", link: "/" },
       { label: "No-Flip", link: "/" },
-      { label: "Real time", link: "/" },
     ],
   },
   {
@@ -107,10 +98,6 @@ const useStyles = createStyles((theme) => ({
     }`,
   },
 }));
-
-/* interface Icon {
-  icon: TablerIcon;
-} */
 
 export default function NavbarNested() {
   const { classes } = useStyles();

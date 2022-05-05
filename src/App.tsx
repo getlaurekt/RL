@@ -7,7 +7,6 @@ import {
   Grid,
 } from "@mantine/core";
 import NavbarNested from "./Components/Navbar/Navbar";
-import HeroText from "./Components/Hero/HeroText";
 import ThumbGroup from "./Components/ThumbGroup/ThumbGroup";
 
 function App() {
@@ -28,7 +27,6 @@ function App() {
           <Grid grow style={{ margin: 0 }}>
             <NavbarNested />
             <Grid.Col span={8}>
-              {/* <HeroText /> */}
               <ThumbGroup />
             </Grid.Col>
           </Grid>

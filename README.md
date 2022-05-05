@@ -8,7 +8,7 @@ Re-make of my old RocketLib project in new technologies
 
 ## Screenshot
 
-![App Screenshot](https://i.imgur.com/DOp71xb.png)
+![App Screenshot](https://i.imgur.com/waC6Dw9.png)
 
 ## About
 

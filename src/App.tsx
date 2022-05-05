@@ -8,6 +8,7 @@ import {
 } from "@mantine/core";
 import NavbarNested from "./Components/Navbar/Navbar";
 import HeroText from "./Components/Hero/HeroText";
+import ThumbGroup from "./Components/ThumbGroup/ThumbGroup";
 
 function App() {
   const [colorScheme, setColorScheme] = useState<ColorScheme>("light");
@@ -27,7 +28,8 @@ function App() {
           <Grid grow style={{ margin: 0 }}>
             <NavbarNested />
             <Grid.Col span={8}>
-              <HeroText />
+              {/* <HeroText /> */}
+              <ThumbGroup />
             </Grid.Col>
           </Grid>
         </MantineProvider>
